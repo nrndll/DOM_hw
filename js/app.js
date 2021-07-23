@@ -26,9 +26,13 @@ const createAlbumItem = form => {
     albumArtist.textContent = form.artist.value;
     albumItem.appendChild(albumArtist);
 
-    // const albumYear = document.createElement('h5');
-    // albumYear.textContent = form.year.value;
-    // albumItem.appendChild(albumYear);
+    const albumYear = document.createElement('h5');
+    albumYear.textContent = form.year.value;
+    albumItem.appendChild(albumYear);
+
+    const albumRating = document.createElement('h4');
+    albumRating.textContent = form.rating.value;
+    albumItem.appendChild(albumRating);
 
     return albumItem;
 };
