@@ -15,29 +15,50 @@ const handleSubmit = event => {
     const albumItem = createAlbumItem(event.target);
     const albumList = document.querySelector('#album-list');
     albumList.appendChild(albumItem);
+    event.target.reset();
 };
 
 const createAlbumItem = form => {
     const albumItem = document.createElement('li');
     albumItem.classList.add('album-item');
 
-    const albumName = document.createElement('h3');
-    albumName.textContent = form.album.value;
+    const albumName = getAlbumName(form);
     albumItem.appendChild(albumName);
 
-    const albumArtist = document.createElement('h4');
-    albumArtist.textContent = form.artist.value;
+    const albumArtist = getAlbumArtist(form);
     albumItem.appendChild(albumArtist);
 
-    const albumYear = document.createElement('h5');
-    albumYear.textContent = form.year.value;
+    const albumYear = getAlbumYear(form);
     albumItem.appendChild(albumYear);
 
-    const albumRating = document.createElement('h4');
-    albumRating.textContent = form.rating.value;
+    const albumRating = getAlbumRating(form);
     albumItem.appendChild(albumRating);
 
     return albumItem;
+};
+
+const getAlbumName = form => {
+    const albumName = document.createElement('h3');
+    albumName.textContent = form.album.value;
+    return albumName;
+};
+
+const getAlbumArtist = form => {
+    const albumArtist = document.createElement('h4');
+    albumArtist.textContent = form.artist.value;
+    return albumArtist;
+};
+
+const getAlbumYear = form => {
+    const albumYear = document.createElement('h5');
+    albumYear.textContent = form.year.value;
+    return albumYear;
+};
+
+const getAlbumRating = form => {
+    const albumRating = document.createElement('h4');
+    albumRating.textContent = form.rating.value;
+    return albumRating;
 };
 
 const handleDeleteAll = () => {

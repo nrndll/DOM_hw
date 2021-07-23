@@ -1,0 +1,19 @@
+#wrapper {
+    width: 100%;
+    display: flex;
+    border: solid black;
+}
+
+.form-input {
+
+}
+
+#album-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.album-item {
+
+}
