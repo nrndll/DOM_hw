@@ -39,25 +39,25 @@ const createAlbumItem = form => {
 
 const getAlbumName = form => {
     const albumName = document.createElement('h3');
-    albumName.textContent = form.album.value;
+    albumName.textContent = `Album: ${form.album.value}`;
     return albumName;
 };
 
 const getAlbumArtist = form => {
     const albumArtist = document.createElement('h4');
-    albumArtist.textContent = form.artist.value;
+    albumArtist.textContent = `Artist: ${form.artist.value}`;
     return albumArtist;
 };
 
 const getAlbumYear = form => {
     const albumYear = document.createElement('h5');
-    albumYear.textContent = form.year.value;
+    albumYear.textContent = `Released: ${form.year.value}`;
     return albumYear;
 };
 
 const getAlbumRating = form => {
     const albumRating = document.createElement('h4');
-    albumRating.textContent = form.rating.value;
+    albumRating.textContent = `My rating: ${form.rating.value} out of 5`;
     return albumRating;
 };
 
