@@ -1,19 +1,57 @@
-#wrapper {
-    width: 100%;
-    display: flex;
+header h1 {
+    border: solid black;
+    margin: auto;
+}
+
+body h2 {
     border: solid black;
 }
 
-.form-input {
+#main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.form-input {
+    margin: auto;
+}
+
+.rating-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-input {
+    margin: auto;
+}
+
+#delete {
+width: fit-content;
+margin: auto;
+border: solid black;
+}
+
+.list-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    border: solid black;
 }
 
 #album-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    border: solid black;
 }
 
 .album-item {
-
+    border: solid black;
+    width: auto;
+    margin: auto;
 }

@@ -15,10 +15,10 @@
 
 <body>
     <form id="album-form">
-        <div id="wrapper">
+        <div id="main-wrapper">
             
             <div class="form-input">
-                <label for="album">Album Name:</label>
+                <label for="album">Album:</label>
                 <input type="text" name="album" id="album" required>
             </div>
 
@@ -33,17 +33,36 @@
             </div>
 
             <div class="form-input">
-                <label for="rating">My Rating:</label>
-                <label for="rating5">5</label>
-                <input type="radio" name="rating" id="rating5" value="5">
-                <label for="rating4">4</label>
-                <input type="radio" name="rating" id="rating4" value="4">
-                <label for="rating3">3</label>
-                <input type="radio" name="rating" id="rating3" value="3">
-                <label for="rating2">2</label>
-                <input type="radio" name="rating" id="rating2" value="2">
-                <label for="rating1">1</label>
-                <input type="radio" name="rating" id="rating1" value="1">
+                <div class="rating-wrapper">
+                    <label for="rating">My Rating:</label>
+                    <div class="radio-wrapper">
+
+                        <div class="radio-input">
+                            <input type="radio" name="rating" id="rating5" value="5">
+                            <label for="rating5">5</label>
+                        </div>
+
+                        <div class="radio-input">
+                            <input type="radio" name="rating" id="rating4" value="4">
+                            <label for="rating4">4</label>
+                        </div>
+
+                        <div class="radio-input">
+                            <input type="radio" name="rating" id="rating3" value="3">
+                            <label for="rating3">3</label>
+                        </div>
+
+                        <div class="radio-input">
+                            <input type="radio" name="rating" id="rating2" value="2">
+                            <label for="rating2">2</label>
+                        </div>
+                        
+                        <div class="radio-input">
+                            <input type="radio" name="rating" id="rating1" value="1">
+                            <label for="rating1">1</label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="form-input">
@@ -53,9 +72,11 @@
         </div>
     </form>
 
-    <button id="delete">Delete All</button>
+    <div class="list-title-wrapper">
+        <h2>Album List</h2>
+        <button id="delete">Delete All</button>
+    </div>
 
-    <h2>Album List</h2>
     <ul id="album-list"></ul>
 </body>
 <footer></footer>
